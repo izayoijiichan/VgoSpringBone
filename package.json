@@ -1,0 +1,26 @@
+{
+  "name": "izayoi.vgospringbone",
+  "displayName": "VgoSpringBone",
+  "description": "VgoSpringBone is a processing-optimized Spring Bone.",
+  "version": "1.0.0",
+  "type": "tool",
+  "category": "",
+  "keywords": [
+    "unity",
+    "springbone"
+  ],
+  "unity": "2018.4",
+  "unityRelease": "29f1",
+  "author": {
+    "name" : "Izayoi Jiichan"
+  },
+  "license": {
+    "type": "MIT",
+    "url": "https://github.com/izayoijiichan/VgoSpringBone/tree/master/LICENSE.md"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/izayoijiichan/VgoSpringBone.git"
+  },
+  "dependencies": {}
+}
