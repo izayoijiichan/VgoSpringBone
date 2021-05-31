@@ -114,10 +114,22 @@ namespace VgoSpringBone
 
             for (int rootIndex = 0; rootIndex < rootDatas.Length; rootIndex++)
             {
-                // @notice Count - 1
-                for (int boneIndex = 0; boneIndex < rootDatas[rootIndex].Count - 1; boneIndex++)
+                List<SpringBoneData> roodData = rootDatas[rootIndex];
+
+                if (roodData == null)
                 {
-                    SpringBoneData boneData = rootDatas[rootIndex][boneIndex];
+                    continue;
+                }
+
+                // @notice Count - 1
+                for (int boneIndex = 0; boneIndex < roodData.Count - 1; boneIndex++)
+                {
+                    SpringBoneData boneData = roodData[boneIndex];
+
+                    if (boneData == null)
+                    {
+                        continue;
+                    }
 
                     var verlet = boneData.verlet;
                     
@@ -150,6 +162,11 @@ namespace VgoSpringBone
             if (colliders.Count > 0)
             {
                 colliders.Clear();
+            }
+
+            if (colliderGroups == null)
+            {
+                return;
             }
 
             foreach (var group in colliderGroups)
@@ -192,10 +209,22 @@ namespace VgoSpringBone
 
             for (int rootIndex = 0; rootIndex < rootDatas.Length; rootIndex++)
             {
-                // @notice Count - 1
-                for (int boneIndex = 0; boneIndex < rootDatas[rootIndex].Count - 1; boneIndex++)
+                List<SpringBoneData> roodData = rootDatas[rootIndex];
+
+                if (roodData == null)
                 {
-                    SpringBoneData boneData = rootDatas[rootIndex][boneIndex];
+                    continue;
+                }
+
+                // @notice Count - 1
+                for (int boneIndex = 0; boneIndex < roodData.Count - 1; boneIndex++)
+                {
+                    SpringBoneData boneData = roodData[boneIndex];
+
+                    if (boneData == null)
+                    {
+                        continue;
+                    }
 
                     boneData.parentTransform = boneData.headTransform.parent;
                     boneData.tailTransform = rootDatas[rootIndex][boneIndex + 1].headTransform;
@@ -239,10 +268,24 @@ namespace VgoSpringBone
 
                 for (int rootIndex = 0; rootIndex < rootDatas.Length; rootIndex++)
                 {
-                    // @notice Count - 1
-                    for (int boneIndex = 0; boneIndex < rootDatas[rootIndex].Count - 1; boneIndex++)
+                    List<SpringBoneData> roodData = rootDatas[rootIndex];
+
+                    if (roodData == null)
                     {
-                        rootDatas[rootIndex][boneIndex].verlet.DrawGizmo(gizmoColor);
+                        continue;
+                    }
+
+                    // @notice Count - 1
+                    for (int boneIndex = 0; boneIndex < roodData.Count - 1; boneIndex++)
+                    {
+                        SpringBoneData boneData = roodData[boneIndex];
+
+                        if (boneData == null)
+                        {
+                            continue;
+                        }
+
+                        boneData.verlet.DrawGizmo(gizmoColor);
                     }
                 }
             }
