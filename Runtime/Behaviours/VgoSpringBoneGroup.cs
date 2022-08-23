@@ -13,7 +13,7 @@ namespace VgoSpringBone
     /// <remarks>
     /// DefaultExecutionOrder(11000) means calculate springbone after FinalIK( VRIK )
     /// </remarks>
-    [AddComponentMenu("Vgo/VgoSpringBoneGroup")]
+    [AddComponentMenu("Vgo/Vgo Spring Bone Group")]
     [DefaultExecutionOrder(11000)]
     public class VgoSpringBoneGroup : MonoBehaviour
     {

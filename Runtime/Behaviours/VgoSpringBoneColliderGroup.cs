@@ -9,7 +9,7 @@ namespace VgoSpringBone
     /// <summary>
     /// VGO Spring Bone Collider Group
     /// </summary>
-    [AddComponentMenu("VGO/VgoSpringBoneColliderGroup")]
+    [AddComponentMenu("Vgo/Vgo Spring Bone Collider Group")]
     [DefaultExecutionOrder(11001)]
     [DisallowMultipleComponent]
     public class VgoSpringBoneColliderGroup : MonoBehaviour
